@@ -19,6 +19,6 @@ In case you would like to contribute, please update only
 ``fitEllipse.Pnw`` as this is the source of both the python file and
 the documentation.
 
-I would have liked to make the documentation visible on github right
+I would have liked to make the documentation viewableon github right
 away, but (as far as I know) github does not support mathjax. Thus, as
 a substitute, I provide the pdf file.
