@@ -1,6 +1,7 @@
 
 import numpy as np
 from numpy.linalg import eig, inv
+import matplotlib.pylab as plt
 
 def fitEllipse(x,y):
     x = x[:,np.newaxis]
@@ -69,7 +70,6 @@ xx = center[0] + a*np.cos(R)*np.cos(phi) - b*np.sin(R)*np.sin(phi)
 yy = center[1] + a*np.cos(R)*np.sin(phi) + b*np.sin(R)*np.cos(phi)
 
 
-from pylab import *
-plot(x,y)
-plot(xx,yy, color = 'red')
-show()
+plt.plot(x,y)
+plt.plot(xx,yy, color = 'red')
+plt.show()

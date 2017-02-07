@@ -231,16 +231,17 @@ print("axes = ", axes)
 @
 
 As a plot:
-<<fig = True>>=
+
+<<>>=
 a, b = axes
 xx = center[0] + a*np.cos(R)*np.cos(phi) - b*np.sin(R)*np.sin(phi)
 yy = center[1] + a*np.cos(R)*np.sin(phi) + b*np.sin(R)*np.cos(phi)
 
+import matplotlib.pylab as plt
 
-from pylab import *
-plot(x,y)
-plot(xx,yy, color = 'red')
-show()
+plt.plot(x,y)
+plt.plot(xx,yy, color = 'red')
+plt.show()
 @
 
 Not too bad altogether. By increasing the arc the results improve
