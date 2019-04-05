@@ -5,7 +5,7 @@ Fitting an Ellipse to a Set of Data Points
 This python program fits an ellipse through a given set of points.
 This ellips is optimal in the least squares sense.
 
-The code is documented in ``fitEllipse.pdf``.
+The code is documented in ``fit_ellipse.pdf``.
 
 I use pythontex to make the pdf from the latex file (first pdflatex,
 then pythontex, then pdflatex again). See the docs of pythontex. BTW,
