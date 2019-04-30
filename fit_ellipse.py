@@ -1,32 +1,8 @@
-<<<<<<< HEAD
+''' fit_ellipse.py by Nicky van Foreest '''
+
 from math import atan2
 import numpy as np
-from numpy.linalg import eig, inv
-
-
-def fitEllipse(x, y):
-    x = x[:, np.newaxis]
-    y = y[:, np.newaxis]
-    D = np.hstack((x * x, x * y, y * y, x, y, np.ones_like(x)))
-    S = np.dot(D.T, D)
-    C = np.zeros([6, 6])
-    C[0, 2] = C[2, 0] = 2
-    C[1, 1] = -1
-    E, V = eig(np.dot(inv(S), C))
-    n = np.argmax(np.abs(E))
-    a = V[:, n]
-    return a
-
-
-def ellipse_center(a):
-=======
-#!/usr/bin/env python2.7
-''' fit_ellipse.py by Nicky van Foreest '''
-import os
-import numpy as np
-from numpy.linalg import svd
-from numpy.linalg import inv
-import matplotlib.pyplot as plt
+from numpy.linalg import eig, inv, svd
 
 
 def ellipse_center(a):
@@ -34,7 +10,6 @@ def ellipse_center(a):
 
     @param a the result of __fit_ellipse
     """
->>>>>>> b755961fecfb44b4bdb5b123dcde2763373287a8
     b, c, d, f, g, a = a[1] / 2, a[2], a[3] / 2, a[4] / 2, a[5], a[0]
     num = b * b - a * c
     x0 = (c * d - b * f) / num
@@ -42,15 +17,6 @@ def ellipse_center(a):
     return np.array([x0, y0])
 
 
-<<<<<<< HEAD
-def ellipse_angle_of_rotation(a):
-    b, c, d, f, g, a = a[1] / 2, a[2], a[3] / 2, a[4] / 2, a[5], a[0]
-
-    # python math atan2 seems to work better than the algo presented on mathworld
-
-    return atan2(2 * b, (a - c)) / 2
-
-=======
 def ellipse_axis_length(a):
     """@brief calculate ellipse axes lengths
 
@@ -73,37 +39,7 @@ def ellipse_angle_of_rotation(a):
     @param a the result of __fit_ellipse
     """
     b, c, d, f, g, a = a[1] / 2, a[2], a[3] / 2, a[4] / 2, a[5], a[0]
->>>>>>> b755961fecfb44b4bdb5b123dcde2763373287a8
-    if b == 0:
-        if a > c:
-            return 0
-        else:
-            return np.pi / 2
-    else:
-<<<<<<< HEAD
-        return atan2(2 * b, (a - c)) / 2
-=======
->>>>>>> b755961fecfb44b4bdb5b123dcde2763373287a8
-        if a > c:
-            return np.arctan(2 * b / (a - c)) / 2
-        else:
-            return np.pi / 2 + np.arctan(2 * b / (a - c)) / 2
-
-<<<<<<< HEAD
-def ellipse_axis_length(a):
-    b, c, d, f, g, a = a[1] / 2, a[2], a[3] / 2, a[4] / 2, a[5], a[0]
-    up = 2 * (a * f * f + c * d * d + g * b * b - 2 * b * d * f - a * c * g)
-    down1 = (b * b - a * c) * (
-        (c - a) * np.sqrt(1 + 4 * b * b / ((a - c) * (a - c))) - (c + a)
-    )
-    down2 = (b * b - a * c) * (
-        (a - c) * np.sqrt(1 + 4 * b * b / ((a - c) * (a - c))) - (c + a)
-    )
-    res1 = np.sqrt(up / down1)
-    res2 = np.sqrt(up / down2)
-    return np.array([res1, res2])
-
-=======
+    return atan2(2 * b, (a - c)) / 2
 
 def fmod(x, y):
     """@brief floating point modulus
@@ -161,4 +97,3 @@ def fit_ellipse(x, y):
         # ensure the angle is betwen 0 and 2*pi
         alpha = fmod(phi, 2. * np.pi)
     return [a, b, centre[0], centre[1], phi]
->>>>>>> b755961fecfb44b4bdb5b123dcde2763373287a8
