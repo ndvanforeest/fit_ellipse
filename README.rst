@@ -12,3 +12,5 @@ then pythontex, then pdflatex again). See the docs of pythontex. BTW,
 pythotex is really useful. I use it all the time.
 
 The source of the code can be found in ``fitEllipse.tex``. 
+
+Before moving this code to github, it was available at http://nicky.vanforeest.com/misc/fitEllipse/fitEllipse.html. 
