@@ -43,7 +43,7 @@ For instance, it does not seem to work well for circles.
 Even though I never use this code myself, it turns out to be quite a `big' hit.
 I wrote it in 2006 to test a numerical integrator for the following case.
 Suppose we are flying in a rocket in a circular orbit around the earth.
-If we hit the break for a very short time the orbit must become elliptical: we lose kinetic energy, but as the potential energy remains the same, the rocket must reach the same height after completing an orbit.
+If we hit the brake for a very short time the orbit must become elliptical: we lose kinetic energy, but as the potential energy remains the same, the rocket must reach the same height after completing an orbit.
 Thus, to check python's numerical integrator, I used the integrator to compute a rocket in an elliptical orbit.
 Thus I used the code to check that the orbit was indeed an ellipse.
 
@@ -111,7 +111,7 @@ To solve this, take the gradient with respect to $a$ and the derivative with res
   \partial_a L(a, \lambda) & = 0 \implies 2 S a - \lambda C a  = 0 \implies S a = \lambda C a \\
   \partial_\lambda L(a, \lambda) & = 0 \implies a^T C a = \phi.
 \end{align*}
-Multiplying the first equaton from the left with $a^T$ and using the second equation we obtain that
+Multiplying the first equation from the left with $a^T$ and using the second equation we obtain that
 \begin{equation*}
 a^T S a = \lambda a^T C a = \lambda \phi
 \end{equation*}
