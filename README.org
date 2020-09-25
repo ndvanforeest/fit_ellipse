@@ -1,0 +1,12 @@
+* Fitting an Ellipse to a Set of Data Points
+
+This python program fits an ellipse through a given set of points.
+This ellips is optimal in the least squares sense.
+
+- The code is documented in =fitEllipse.org= from which I made =fitEllipse.pdf= and the python source files (with tangling).
+-  =fitEllipse.py= contains the algorithm.
+- =fit_ellipse_example.py= shows an example on how to use the code
+- =run_fit_ellipse.py= makes many test cases.
+
+
+Before moving this code to github, it was available at http://nicky.vanforeest.com/misc/fitEllipse/fitEllipse.html. 

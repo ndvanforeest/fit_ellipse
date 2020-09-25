@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-''' run_fit_ellipse.py by Nicky van Foreest '''
 import numpy as np
 from numpy.random import rand as rand
 import matplotlib.pyplot as plt
-from fit_ellipse import *
+
+from fitEllipse import fit_ellipse
 
 # rotation matrix
 def rotation_matrix(theta):
@@ -20,15 +20,15 @@ for sample_i in range(0, n_samples):
     n = len(R)
 
     # random ellipse data
-    x_0 = .1 + 1.5*rand() - .1*rand()*rand(n)
-    y_0 = .1 + 1.5*rand() - .1*rand()*rand(n)
-    y_s = .1 + 1.5*rand() - .1*rand()*rand(n)
-    x_s = .1 + 1.5*rand() - .1*rand()*rand(n)
-    x = x_0 + x_s * np.cos(R) + .01*rand(n)
-    y = y_0 + y_s * np.sin(R) + .01*rand(n)
+    x_0 = 0.1 + 1.5 * rand() - 0.1 * rand() * rand(n)
+    y_0 = 0.1 + 1.5 * rand() - 0.1 * rand() * rand(n)
+    y_s = 0.1 + 1.5 * rand() - 0.1 * rand() * rand(n)
+    x_s = 0.1 + 1.5 * rand() - 0.1 * rand() * rand(n)
+    x = x_0 + x_s * np.cos(R) + 0.01 * rand(n)
+    y = y_0 + y_s * np.sin(R) + 0.01 * rand(n)
 
     # random rotation
-    theta = rand() * np.pi * 2.
+    theta = rand() * np.pi * 2.0
     rot = rotation_matrix(theta)
 
     # apply rotation matrix
@@ -49,7 +49,7 @@ for sample_i in range(0, n_samples):
     # plot the data points and the fitted ellipse
     plt.figure(0)
     plt.plot(x, y, color='blue', label='points')
-    plt.plot(xx, yy, '+', color='red', label='fitted ellipse', linewidth=2.)
+    plt.plot(xx, yy, '+', color='red', label='fitted ellipse', linewidth=2.0)
     plt.legend()
     plt.axes().set_aspect('equal', 'datalim')
     plt.savefig('plot' + str(sample_i) + '.png')
