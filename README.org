@@ -3,8 +3,9 @@
 This python program fits an ellipse through a given set of points.
 This ellipse is optimal in the least squares sense.
 
-- The code is documented in =fitEllipse.org= from which I made =fitEllipse.pdf= and the python source files (with tangling).
--  =fitEllipse.py= contains the algorithm.
+-  =fitEllipse.org= contains the source code
+-  =fitEllipse.pdf= is the pdf made from =fitEllipse.org= to make the maths readable. 
+-  =fitEllipse.py= contains the algorithm, obtained by tangling =fitEllipse.org=
 - =fit_ellipse_example.py= shows an example on how to use the code
 - =run_fit_ellipse.py= makes many test cases.
 

@@ -12,7 +12,6 @@
 #+LATEX_HEADER: \setminted[python]{linenos=true}
 #+LATEX_HEADER: \setminted[python]{frame=lines}
 #+LATEX_HEADER: \usepackage{fouriernc}
-#+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{cleveref}
 
 #+OPTIONS:  toc:nil  
