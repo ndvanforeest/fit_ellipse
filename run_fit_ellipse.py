@@ -5,18 +5,11 @@ from numpy.random import rand as rand
 import matplotlib.pyplot as plt
 from fit_ellipse import *
 
-
-
-# square a number
-def sq(x):
-    return x * x
-
-
 # rotation matrix
 def rotation_matrix(theta):
     st = np.sin(theta)
     ct = np.cos(theta)
-    return np.matrix([[ct, st], [st, ct]])
+    return np.matrix([[ct, st], [-st, ct]])
 
 
 # test the fitting on randomly generated ellipse data
