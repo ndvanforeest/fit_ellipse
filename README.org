@@ -3,7 +3,7 @@
 
 ** 2022-01
 
-There is a module of skikit that deals with the  problem of finding in  ellipse through a set of data points: https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.EllipseModel. Please use this module instead of my code.
+There is a module of scikit that deals with the  problem of finding in  ellipse through a set of data points: https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.EllipseModel. Please use this module instead of my code.
 
 
 ** Old code, don't use
