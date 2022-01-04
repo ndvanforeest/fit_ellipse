@@ -14,6 +14,8 @@ I just keep my code and documentation in case people are interested in obtaining
 
 If you still like to use it, as it is available under the MIT license: You can use it in any way you like, but don't blame me if you don't like the result.
 
+I will no longer maintain this code, unless the scikit module will disappear.
+
 
 -  =fitEllipse.org= contains the source code
 -  =fitEllipse.pdf= is the pdf made from =fitEllipse.org= to make the maths readable.
