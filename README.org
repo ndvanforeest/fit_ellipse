@@ -1,13 +1,17 @@
-* COMMENT Fitting an Ellipse to a Set of Data Points
+* Fitting an Ellipse to a Set of Data Points
 
 
 ** 2022-01
 
-There is a module of skikit that deals with the  problem of finding in  ellipse through a set of data points that is optimal is least squares sense:
-[[id:][https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.EllipseModel]]. Please use this module instead of my code. I just keep my code and documentation in case people are interested in obtaining a basic understanding how to attack the problem.
+There is a module of skikit that deals with the  problem of finding in  ellipse through a set of data points: https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.EllipseModel. Please use this module instead of my code.
+
+
+** Old code, don't use
 
 This old python program fits an ellipse through a given set of points.
 This ellipse is optimal in the least squares sense.
+I just keep my code and documentation in case people are interested in obtaining a basic understanding how to attack the problem.
+
 
 -  =fitEllipse.org= contains the source code
 -  =fitEllipse.pdf= is the pdf made from =fitEllipse.org= to make the maths readable.
