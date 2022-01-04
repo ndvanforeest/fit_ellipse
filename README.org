@@ -12,6 +12,8 @@ This old python program fits an ellipse through a given set of points.
 This ellipse is optimal in the least squares sense.
 I just keep my code and documentation in case people are interested in obtaining a basic understanding how to attack the problem.
 
+If you still like to use it, as it is available under the MIT license: You can use it in any way you like, but don't blame me if you don't like the result.
+
 
 -  =fitEllipse.org= contains the source code
 -  =fitEllipse.pdf= is the pdf made from =fitEllipse.org= to make the maths readable.
